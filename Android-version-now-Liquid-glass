@@ -1,0 +1,222 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>my awesome color list</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="perant1">
+<div class="item1">Android</div>
+</nav>
+<br>
+<nav class="perant">
+  <div class="item">Android 16</div>
+  <div class="item">Android 15</div>
+  <div class="item">Android 14</div>
+</nav>
+<br>
+<nav class="perant">
+  <div class="item">Android 13</div>
+  <div class="item">Android 12</div>
+  <div class="item">Android 11</div>
+</nav>
+<br>
+<nav class="perant">
+  <div class="item">Android 10</div>
+  <div class="item">Android 9</div>
+  <div class="item">Android 8</div>
+</nav>
+<br>
+<nav class="perant">
+  <div class="item">Android 7</div>
+  <div class="item">Android 6</div>
+  <div class="item">Android 5</div>
+</nav>
+<br>
+<nav class="perant">
+  <div class="item">Android 4</div>
+  <div class="item">Android 3</div>
+  <div class="item">Android 2</div>
+</nav>
+<style>
+body{
+  background:#222831;
+  background-size:cover;
+  height:90vh;
+  gap:10px
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  border-block:2px solid rgba(255,255,255,0.413);
+  border-radius:40px;
+  box-shadow:1px 1px 5px 0.8px rgba(255,255,255,0.413)  inset;
+  backdrop-filter: blur(15px);
+  margin-left:20px;
+  margin-right:20px;
+  margin-top:30px
+}
+.perant{
+  height:auto;
+  background: transparent;
+  border-block:2px solid rgba(255,255,255,0.413);
+  padding: 10px ;
+  justify-content:center;
+  align-items: center;
+  display:flex;
+  gap: 5px;
+  border-radius: 20px;
+  align-items:end;
+  width:270px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:auto;
+  margin-bottom:auto;
+  box-shadow:1px 1px 5px 0.8px rgba(255,255,255,0.413)  inset;
+  font-weight: bold;
+  font-size: 15pt;
+  backdrop-filter: blur(40px) saturate(180%);
+}
+.item{
+border-block:2px solid rgba(255,255,255,0.413);
+background: transparent;
+width:px;
+margin-left: auto;
+margin-right: auto;
+padding: 5px;
+border-radius: 20px;
+color:rgba(255,255,255,0.413);
+box-shadow:0.1px 0.1px 5px 0.8px rgba(255,255,255,0.413)  inset;
+text-decoration:none;
+transition: 0.5s;
+user-select:none;
+backdrop-filter: blur(40px) saturate(180%);
+text-align:center;
+}
+
+
+.item:hover{
+  transform: scale(1.05);
+box-shadow:1px 1px 10px 0.8px  rgba(255,255,255,0.413)  inset;
+color:#fff;
+
+}
+
+.item:active {
+  padding:40px;
+  transform:(1.9);
+  transform:none;
+  box-shadow:1px 1px 10px 0.8px  rgba(255,255,255,0.413)  inset;
+  backdrop-filter: wavy-blur(20px);
+}
+
+
+.perant1{
+  height:auto;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  padding: 7px ;
+  justify-content:center;
+  align-items: center;
+  display:flex;
+  gap: 5px;
+  border-radius: 20px;
+  align-items:end;
+  width:110px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:auto;
+  margin-bottom:auto;
+  font-weight: bold;
+  font-size: 15pt;
+  text-align: center;
+}
+
+
+
+
+.item1{
+ border-block:2px solid rgba(255,255,255,0.413);
+background: transparent;
+backdrop-filter: blur(15px);
+width:80px;
+margin-left: auto;
+margin-right: auto;
+padding: 5px;
+border-radius: 20px;
+color:rgba(255,255,255,0.413);
+box-shadow:0.1px 0.1px 5px 0.8px rgba(255,255,255,0.413)  inset;
+text-decoration:none;
+transition: 0.5s;
+user-select: none;
+transition: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.item1:hover{
+  transform: scale(1.05);
+box-shadow:1px 1px 10px 0.8px  rgba(255,255,255,0.413)  inset;
+color:#fff;
+border-radius:50px;
+}
+
+.item1:active {
+padding:40px;
+transform:(1.09);
+transform:none;
+box-shadow:1px 1px 10px 0.8px  rgba(255,255,255,0.413)  inset;
+backdrop-filter: wavy-blur(20px);
+}
+
+.item-specular {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-specular::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  
+  /* ده شكل الضوء بتاع آبل */
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%), 
+    rgba(255, 255, 255, 0.25) 0%, 
+    transparent 50%
+  );
+  
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.item-specular:hover::after {
+  opacity: 1;
+}
+
+@keyframes apple-spring {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.98); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.apple-spring-in {
+  animation: item1-spring 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+</style>
+</body>
